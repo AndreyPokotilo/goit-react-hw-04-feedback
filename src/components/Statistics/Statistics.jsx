@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { StatsInfo } from './Statistics.styled';
 
 export function Statistics({ good, neutral, bad, total, positivePercentage }) {
+  console.log("{ good, neutral, bad, total, positivePercentage }:", { good, neutral, bad, total, positivePercentage })
+  
   return (
     <>
       <StatsInfo>Good: {good}</StatsInfo>
