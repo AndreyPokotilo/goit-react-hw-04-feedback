@@ -1,6 +1,4 @@
 import { useState } from 'react';
-// import { useEffect } from 'react';
-// import { Component } from 'react';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
@@ -14,15 +12,15 @@ export function App() {
   const onFeedbackHandler = key => {
     switch (key) {
       case 'good':
-        setGood((good + 1 ));
+        setGood(prevGood => prevGood + 1);
         break;
 
       case 'neutral':
-        setNeutral((neutral + 1));
+        setNeutral(prevNeutral => prevNeutral + 1);
         break;
 
       case 'bad':
-        setBad((bad + 1));
+        setBad(prevBad => prevBad + 1);
         break;
 
       default:
